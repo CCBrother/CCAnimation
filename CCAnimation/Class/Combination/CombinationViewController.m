@@ -33,7 +33,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSArray *array = @[@"添加",@"钉钉",@"点赞",@"贝塞尔曲线",@"进度"];
+    NSArray *array = @[@"添加",@"钉钉",@"点赞",@"贝塞尔曲线",@"进度条"];
     self.navigationItem.title = array[self.type];
     
     [self animationWithType:self.type];

@@ -53,7 +53,7 @@
     NSArray *transitionArray = @[@"Fade(渐变)",@"MoveIn(侧滑)",@"Push(推开)",@"Reveal(揭开)",@"Cube(立方旋转)",@"Suck(飘窗)",@"OglFile(翻片)",@"Ripple(涟漪)",@"Curl(撕开)",@"UnCurl(贴上)",@"CaOpen(相机镜头开放)",@"CaClose(相机镜头关闭)"];
     NSDictionary *dict4 = @{@"value":transitionArray};
     
-    NSArray *combinationArray = @[@"添加",@"钉钉",@"点赞",@"贝塞尔曲线",@"进度"];
+    NSArray *combinationArray = @[@"添加",@"钉钉",@"点赞",@"贝塞尔曲线",@"进度条"];
     NSDictionary *dict5 = @{@"value":combinationArray};
     
     _dataArray = @[dict1, dict2, dict3, dict4, dict5];
