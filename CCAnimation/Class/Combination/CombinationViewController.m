@@ -170,9 +170,8 @@
     [animLayer addAnimation:animation forKey:@"strokeEnd"];
 }
 
-//进度
+//进度条
 - (void)progressAnimation {
-    
     self.progressView.timeInterval = 0.5f;
     //弧线
     [_progressView drawArcWithStartAngle:-M_PI * 5 / 4 endAngle:M_PI/4 lineWidth:10.0f fillColor:[UIColor clearColor] strokeColor:[UIColor lightGrayColor]];
