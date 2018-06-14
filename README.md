@@ -7,11 +7,11 @@
 
 ##  效果图
 ![gif_0](https://github.com/CCBrother/CCAnimation/blob/master/CCAnimation/ShowImages/all.gif)
-![gif_1](https://github.com/CCBrother/CCAnimation/blob/master/CCAnimation/%E6%95%88%E6%9E%9C%E5%9B%BE/basic.gif)
-![gif_2](https://github.com/CCBrother/CCAnimation/blob/master/CCAnimation/%E6%95%88%E6%9E%9C%E5%9B%BE/key.gif)
-![gif_3](https://github.com/CCBrother/CCAnimation/blob/master/CCAnimation/%E6%95%88%E6%9E%9C%E5%9B%BE/group.gif)
-![gif_4](https://github.com/CCBrother/CCAnimation/blob/master/CCAnimation/%E6%95%88%E6%9E%9C%E5%9B%BE/transition.gif)
-![gif_5](https://github.com/CCBrother/CCAnimation/blob/master/CCAnimation/%E6%95%88%E6%9E%9C%E5%9B%BE/combination.gif)
+![gif_1](https://github.com/CCBrother/CCAnimation/blob/master/CCAnimation/ShowImages/basic.gif)
+![gif_2](https://github.com/CCBrother/CCAnimation/blob/master/CCAnimation/ShowImages/key.gif)
+![gif_3](https://github.com/CCBrother/CCAnimation/blob/master/CCAnimation/ShowImages/group.gif)
+![gif_4](https://github.com/CCBrother/CCAnimation/blob/master/CCAnimation/ShowImages/transition.gif)
+![gif_5](https://github.com/CCBrother/CCAnimation/blob/master/CCAnimation/ShowImages/combination.gif)
 
 
 ## 使用
