@@ -1,92 +1,92 @@
 //
-//  UIView+ZKCategory.m
+//  UIView+CCCategory.m
 //  ReadReport
 //
 //  Created by ZhangCc on 2017/11/22.
 //  Copyright © 2017年 Zomcom. All rights reserved.
 //
 
-#import "UIView+ZKCategory.h"
+#import "UIView+CCCategory.h"
 
-@implementation UIView (ZKCategory)
+@implementation UIView (CCCategory)
 
-- (void)setZK_x:(CGFloat)ZK_x {
+- (void)setCC_x:(CGFloat)CC_x {
     CGRect frame = self.frame;
-    frame.origin.x = ZK_x;
+    frame.origin.x = CC_x;
     self.frame = frame;
 }
 
-- (CGFloat)ZK_x {
+- (CGFloat)CC_x {
     return self.frame.origin.x;;
 }
 
-- (void)setZK_y:(CGFloat)ZK_y {
+- (void)setCC_y:(CGFloat)CC_y {
     CGRect frame = self.frame;
-    frame.origin.x = ZK_y;
+    frame.origin.x = CC_y;
     self.frame = frame;
 }
 
-- (CGFloat)ZK_y {
+- (CGFloat)CC_y {
      return self.frame.origin.y;
 }
 
-- (void)setZK_width:(CGFloat)ZK_width {
+- (void)setCC_width:(CGFloat)CC_width {
     CGRect frame = self.frame;
-    frame.size.width = ZK_width;
+    frame.size.width = CC_width;
     self.frame = frame;
 }
 
-- (CGFloat)ZK_width {
+- (CGFloat)CC_width {
     return self.frame.size.width;
 }
 
-- (void)setZK_height:(CGFloat)ZK_height {
+- (void)setCC_height:(CGFloat)CC_height {
     CGRect frame = self.frame;
-    frame.size.height = ZK_height;
+    frame.size.height = CC_height;
     self.frame = frame;
 }
 
-- (CGFloat)ZK_height {
+- (CGFloat)CC_height {
     return self.frame.size.height;
 }
 
-- (void)setZK_size:(CGSize)ZK_size {
+- (void)setCC_size:(CGSize)CC_size {
     CGRect frame = self.frame;
-    frame.size = ZK_size;
+    frame.size = CC_size;
     self.frame = frame;
 }
 
-- (CGSize)ZK_size {
+- (CGSize)CC_size {
     return self.frame.size;
 }
 
-- (void)setZK_origin:(CGPoint)ZK_origin {
+- (void)setCC_origin:(CGPoint)CC_origin {
     CGRect frame = self.frame;
-    frame.origin = ZK_origin;
+    frame.origin = CC_origin;
     self.frame = frame;
 }
 
-- (CGPoint)ZK_origin {
+- (CGPoint)CC_origin {
     return self.frame.origin;
 }
 
-- (void)setZK_centerX:(CGFloat)ZK_centerX {
+- (void)setCC_centerX:(CGFloat)CC_centerX {
     CGPoint center = self.center;
-    center.x = ZK_centerX;
+    center.x = CC_centerX;
     self.center = center;
 }
 
-- (CGFloat)ZK_centerX {
+- (CGFloat)CC_centerX {
     return self.center.x;
 }
 
--(void)setZK_centerY:(CGFloat)ZK_centerY {
+-(void)setCC_centerY:(CGFloat)CC_centerY {
     CGPoint center = self.center;
-    center.x = ZK_centerY;
+    center.x = CC_centerY;
     self.center = center;
 }
 
-- (CGFloat)ZK_centerY {
+- (CGFloat)CC_centerY {
     return self.center.y;
 }
 

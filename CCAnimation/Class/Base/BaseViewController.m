@@ -21,7 +21,7 @@
     
     _bgView = [[UIView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - 100)/2, SCREEN_HEIGHT/2 - 100, 100, 100)];
     _bgView.backgroundColor = [UIColor colorWithHexString:@"FF6BA0"];
-//    _bgView.layer.cornerRadius = 5.0f;
+//    _bgView.layer.cornerRadius = 1.0f;
 //    _bgView.layer.masksToBounds = YES;
     [self.view addSubview:_bgView];
     

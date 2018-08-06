@@ -81,7 +81,7 @@
     self.speedLabel.text = @"0";
     
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMinX(self.speedLabel.frame), CGRectGetMaxY(self.speedLabel.frame), 50, 15)];
-    label.ZK_centerX = self.speedLabel.ZK_centerX;
+    label.CC_centerX = self.speedLabel.CC_centerX;
     label.textAlignment = NSTextAlignmentCenter;
     label.font = [UIFont systemFontOfSize:10];
     label.text = @"体重/斤";

@@ -101,14 +101,11 @@
 - (void)dingdingAnimation {
     UILabel *homeLabel = [self createHomeButtonView];
     
-    DWBubbleMenuButton *upMenuView = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - homeLabel.frame.size.width - 20.f,
-                                                                                          self.view.frame.size.height - homeLabel.frame.size.height - 20.f,
-                                                                                          homeLabel.frame.size.width,
-                                                                                          homeLabel.frame.size.height)
-                                                            expansionDirection:DirectionUp];
+    CGFloat upMenuViewX = SCREEN_WIDTH - homeLabel.CC_width - 20.f;
+    CGFloat upMenuViewY = SCREEN_HEIGHT - homeLabel.CC_height - 20.f;
+    DWBubbleMenuButton *upMenuView = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(upMenuViewX,upMenuViewY,homeLabel.CC_width,homeLabel.CC_height) expansionDirection:DirectionUp];
     upMenuView.homeButtonView = homeLabel;
     [upMenuView addButtons:[self createDemoButtonArray]];
-    
     [self.view addSubview:upMenuView];
 }
 
@@ -128,11 +125,11 @@
 - (void)bezierPathAnimation {
     UIBezierPath *path = [UIBezierPath bezierPath];
     // 首先设置一个起始点
-    CGPoint startPoint = CGPointMake(self.view.frame.size.width/2, 220);
+    CGPoint startPoint = CGPointMake(SCREEN_WIDTH/2, 220);
     // 以起始点为路径的起点
-    [path moveToPoint:CGPointMake(self.view.frame.size.width/2, 220)];
+    [path moveToPoint:CGPointMake(SCREEN_WIDTH/2, 220)];
     // 设置一个终点
-    CGPoint endPoint = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height-300);
+    CGPoint endPoint = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT - 300);
     // 设置第一个控制点
     CGPoint controlPoint1 = CGPointMake(100, 120);
     // 设置第二个控制点
@@ -142,9 +139,9 @@
     // 设置另一个起始点
     [path moveToPoint:endPoint];
     // 设置第三个控制点
-    CGPoint controlPoint3 = CGPointMake(self.view.frame.size.width, 280);
+    CGPoint controlPoint3 = CGPointMake(SCREEN_WIDTH, 280);
     // 设置第四个控制点
-    CGPoint controlPoint4 = CGPointMake(self.view.frame.size.width-100, 120);
+    CGPoint controlPoint4 = CGPointMake(SCREEN_WIDTH - 100, 120);
     // 添加二次贝塞尔曲线
     [path addCurveToPoint:startPoint controlPoint1:controlPoint3 controlPoint2:controlPoint4];
     // 设置线断面类型
@@ -172,24 +169,25 @@
 
 //进度条
 - (void)progressAnimation {
+    
     self.progressView.timeInterval = 0.5f;
-    //弧线
+    // 弧线
     [_progressView drawArcWithStartAngle:-M_PI * 5 / 4 endAngle:M_PI/4 lineWidth:10.0f fillColor:[UIColor clearColor] strokeColor:[UIColor lightGrayColor]];
     // 计时器
     _progressView.speedValue = 180.8f;
     [NSTimer scheduledTimerWithTimeInterval:_progressView.timeInterval target:_progressView selector:@selector(runSpeedProgress) userInfo:nil repeats:NO];
-    //刻度
+    // 刻度
     [_progressView drawScaleWithDivide:50 andRemainder:5 strokeColor:[UIColor blackColor] filleColor:[UIColor clearColor] scaleLineNormalWidth:5 scaleLineBigWidth:10];
     // 增加刻度值
     [_progressView DrawScaleValueWithDivide:10];
     // 进度的曲线
     [_progressView drawProgressCicrleWithfillColor:[UIColor clearColor] strokeColor:[UIColor whiteColor]];
-    [_progressView setColorGrad:[NSArray arrayWithObjects:(id)[[UIColor colorWithRed:2.0/255 green:186.0/255 blue:197.0/255 alpha:1.0] CGColor],(id)[[UIColor colorWithRed:44.0/255 green:203.0/255 blue:112.0/255 alpha:1.0] CGColor],(id)[[UIColor colorWithRed:254.0/255 green:136.0/255 blue:5.0/255 alpha:1.0] CGColor],(id)[[UIColor colorWithRed:247.0/255 green:21.0/255 blue:47.0/255 alpha:1.0] CGColor],nil]];
+    [_progressView setColorGrad:[NSArray arrayWithObjects:(id)[UIColor colorWithHexString:@"02BAC5"].CGColor,(id)[UIColor colorWithHexString:@"2CCB7A"].CGColor,(id)[UIColor colorWithHexString:@"FE8805"].CGColor,(id)[UIColor colorWithHexString:@"F7152F"].CGColor,nil]];
 }
 
 #pragma mark - Event respons
 - (void)dwBtnClick:(UIButton *)sender {
-    NSLog(@"你点击的是: %@", sender.titleLabel.text);
+    NSLog(@"亲爱的，你点击的是: %@", sender.titleLabel.text);
 }
 
 - (void)handleBtnClick:(MCFireworksButton *)sender {
@@ -206,7 +204,7 @@
 
 #pragma mark - DCPathButtonDelegate
 - (void)itemButtonTappedAtIndex:(NSUInteger)index {
-    NSLog(@"你点击的是 %ld",index);
+    NSLog(@"亲爱的，你点击的是 %ld",index);
 }
 
 #pragma mark - Private
@@ -242,7 +240,7 @@
 - (LJInstrumentView *)progressView {
     if (!_progressView) {
         _progressView = [[LJInstrumentView   alloc]initWithFrame:CGRectMake(50, 200,  174, 174)];
-        _progressView.ZK_centerX = SCREEN_WIDTH/2;
+        _progressView.CC_centerX = SCREEN_WIDTH/2;
         _progressView.backgroundColor = [UIColor clearColor];
         [self.view addSubview:_progressView];
     }

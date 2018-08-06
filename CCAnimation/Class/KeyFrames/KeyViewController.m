@@ -70,9 +70,9 @@
 //抖动
 - (void)shakeAnimation {
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:TRANSFORM_ROTATION];
-    NSValue *value1 = [NSNumber numberWithFloat:-M_PI/180*4];
-    NSValue *value2 = [NSNumber numberWithFloat:M_PI/180*4];
-    NSValue *value3 = [NSNumber numberWithFloat:-M_PI/180*4];
+    NSValue *value1 = @(- M_PI/180*4);
+    NSValue *value2 = @(M_PI/180*4);;
+    NSValue *value3 = @(- M_PI/180*4);
     animation.values = @[value1, value2, value3];
     animation.repeatCount = MAXFLOAT;
     [self.bgView.layer addAnimation:animation forKey:@"shakeAnimation"];

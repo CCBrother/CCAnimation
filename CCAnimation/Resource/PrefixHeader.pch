@@ -11,6 +11,6 @@
 
 #import "Define.h"
 #import "UIColor+Hex.h"
-#import "UIView+ZKCategory.h"
+#import "UIView+CCCategory.h"
 
 #endif /* PrefixHeader_pch */

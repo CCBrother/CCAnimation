@@ -64,8 +64,8 @@
 //透明度
 - (void)opacityAnimation {
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:OPACITY];
-    animation.fromValue = [NSNumber numberWithFloat:1.0f];
-    animation.toValue = [NSNumber numberWithFloat:0.3f];
+    animation.fromValue = @(1.0);
+    animation.toValue = @(0.3);
     animation.duration = 1.0f;
     [self.bgView.layer addAnimation:animation forKey:@"opacityAnimation"];
 }
@@ -73,8 +73,8 @@
 //缩放
 - (void)scaleAnimation {
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:TRANSFORM_SCALE];
-    animation.fromValue = [NSNumber numberWithFloat:2.0f];
-    animation.toValue = [NSNumber numberWithFloat:0.5f];
+    animation.fromValue = @(2.0);
+    animation.toValue = @(0.5);
     animation.duration = 2.0f;
     [self.bgView.layer addAnimation:animation forKey:@"scaleAnimation"];
 }
@@ -82,7 +82,7 @@
 //旋转
 - (void)rotateAnimation {
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:TRANSFORM_ROTATION_Z];
-    animation.toValue = [NSNumber numberWithFloat:M_PI * 2];
+    animation.toValue = @(M_PI * 2);
     animation.duration = 1.0f;
     [self.bgView.layer addAnimation:animation forKey:@"rotateAnimation"];
 }

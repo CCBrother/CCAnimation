@@ -55,11 +55,11 @@
     keyAnimation.values = @[value1, value2, value3, value4, value5, value6];
     
     CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:TRANSFORM_SCALE];
-    scaleAnimation.fromValue = [NSNumber numberWithFloat:0.8f];
-    scaleAnimation.toValue = [NSNumber numberWithFloat:2.0f];
+    scaleAnimation.fromValue = @(0.8f);
+    scaleAnimation.toValue = @(2.0f);
     
     CABasicAnimation *rotateAnimation = [CABasicAnimation animationWithKeyPath:TRANSFORM_ROTATION];
-    rotateAnimation.toValue = [NSNumber numberWithFloat:M_PI*4];
+    rotateAnimation.toValue = @(M_PI*4);
     
     CAAnimationGroup *groupAnimation = [CAAnimationGroup animation];
     groupAnimation.animations = @[keyAnimation,scaleAnimation,rotateAnimation];
@@ -83,8 +83,8 @@
     [self.bgView.layer addAnimation:positionAnimation forKey:@"positionAnimation"];
     
     CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:TRANSFORM_SCALE];
-    scaleAnimation.fromValue = [NSNumber numberWithFloat:0.8f];
-    scaleAnimation.toValue = [NSNumber numberWithFloat:2.0f];
+    scaleAnimation.fromValue = @(0.8f);
+    scaleAnimation.toValue = @(2.0f);
     scaleAnimation.duration = 1.0f;
     scaleAnimation.fillMode = kCAFillModeForwards;
     scaleAnimation.removedOnCompletion = NO;
@@ -92,7 +92,7 @@
     [self.bgView.layer addAnimation:scaleAnimation forKey:@"scaleAnimation"];
     
     CABasicAnimation *rotateAnimation = [CABasicAnimation animationWithKeyPath:TRANSFORM_ROTATION];
-    rotateAnimation.toValue = [NSNumber numberWithFloat:M_PI*4];
+    rotateAnimation.toValue = @(M_PI * 4);
     rotateAnimation.duration = 1.0f;
     rotateAnimation.fillMode  = kCAFillModeForwards;
     rotateAnimation.removedOnCompletion = NO;
@@ -100,7 +100,7 @@
     [self.bgView.layer addAnimation:rotateAnimation forKey:@"rotateAnimation"];
     
     CABasicAnimation *shrinkAnimation = [CABasicAnimation animationWithKeyPath:TRANSFORM_SCALE];
-    shrinkAnimation.toValue = [NSNumber numberWithFloat:1.0f];
+    shrinkAnimation.toValue = @(1.0f);
     shrinkAnimation.duration = 1.0f;
     shrinkAnimation.fillMode = kCAFillModeForwards;
     shrinkAnimation.removedOnCompletion = NO;
